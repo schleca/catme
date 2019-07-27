@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Button, Logo, CatContainer} from './styles.js';
+import CatName from './CatName.js';
+import CatTv from './CatTv.js';
+import CatRemote from './CatRemote.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+     nbClicks: 0
+    };
+  }
+
+  render() {
+    return (
+      <CatContainer>
+        <CatName />
+        <CatTv nbClicks={this.state.nbClicks} />
+        <CatRemote reload={() => this.setState({ nbClicks: this.state.nbClicks + 1 }) } />
+      </CatContainer>
+    );
+  }
 }
 
 export default App;
