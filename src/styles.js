@@ -40,18 +40,18 @@ export const CatTvContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  
+
   background-size: 78% 43%;
   background-position: center center;
   @media (min-width: 800px) {
-    background-size: 370px 360px;
+    background-size: 300px 270px;
   }
 `;
 
 export const CatTvImage = styled.img`
   width: 100%;
   @media (min-width: 800px) {
-    width: 600px;  
+    width: 475px;
   }
 `;
 
@@ -60,6 +60,7 @@ export const CatRemoteContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   flex-grow: 1;
+  cursor: pointer;
   @media (max-width: 768px) {
     width: 100%;
     justify-content: center;
@@ -67,7 +68,10 @@ export const CatRemoteContainer = styled.div`
 `;
 export const CatRemoteImage = styled.img`
   width: 200px;
-  margin-bottom: -10px;
+  margin-bottom: 0px;
+  &:hover {
+    margin-bottom: -15px;
+  }
   @media (max-width: 768px) {
     margin-bottom: 0px;
     margin-top: -170px;
@@ -78,7 +82,3 @@ export const CatRemoteImage = styled.img`
   }
 
 `
-
-
-
-
